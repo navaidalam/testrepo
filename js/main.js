@@ -2,12 +2,13 @@ var app = {
 
     findByName: function() {
         console.log('findByName');
-		var self = this;
-		this.store.findByName($('.search-key').val(), function(employees) {
-			$('.employee-list').html(self.employeeLiTpl(employees));
-		});
-		/*
         this.store.findByName($('.search-key').val(), function(employees) {
+			var self = this;
+			this.store.findByName($('.search-key').val(), function(employees) {
+				$('.employee-list').html(self.employeeLiTpl(employees));
+			});
+
+			/*
             var l = employees.length;
             var e;
             $('.employee-list').empty();
@@ -15,8 +16,9 @@ var app = {
                 e = employees[i];
                 $('.employee-list').append('<li><a href="#employees/' + e.id + '">' + e.firstName + ' ' + e.lastName + '</a></li>');
             }
+			*/
         });
-		*/
+		
     },
 
     initialize: function() {
